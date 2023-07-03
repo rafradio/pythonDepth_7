@@ -20,8 +20,9 @@ class DirsAndFiles:
 
 
     def copyDirs(self, dirName):
-        takeDir = os.path.join(os.getcwd(), dirName)
-        dir_tupple = list(os.walk(takeDir))[0]
+        dirName = os.path.join(os.getcwd(), dirName)
+        print(dirName)
+        dir_tupple = list(os.walk(dirName))[0]
         if len(dir_tupple[1]) > 0:
             for d in dir_tupple[1]:
                 dirName = dir_tupple[0] + '\\' + d
